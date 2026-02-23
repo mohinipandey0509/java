@@ -33,10 +33,10 @@ public void printValues()
 
 class Main {
     public static void main(String[] args) {
-        LinkedList Mihir= new LinkedList();
-        System.out.println(Mihir);
-        Mihir.addFirst(67);
-        Mihir.printValues();
+        LinkedList Mohini= new LinkedList();
+        System.out.println(Mohini);
+        Mohini.addFirst(67);
+        Mohini.printValues();
         
     }
 }
