@@ -1,0 +1,46 @@
+class stack_syntax{
+    char arr[]=new char[100];
+    int top=-1;
+    
+    void push(char ch){
+        top++;
+        arr[top]=ch;
+    }
+    char pop(){
+        char ch=arr[top];
+        top--;
+        return ch;
+    }
+    boolean isempty(){
+        return top==-1;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("code syntax validator");
+        String s="{[()]}";
+        stack_syntax st=new stack_syntax();
+        boolean flag=true;
+        for(int i=0;i<s.length();i++){
+            char ch=s.charAt(i);
+            if(ch=='('||ch=='['||ch=='{'){
+                st.push(ch);
+                }
+                else{
+                    if(st.isempty()){
+                        flag=false;
+                        break;
+                    }
+                    char x=st.pop();
+                }
+        }
+        if(!st.isempty()){
+            flag=false;
+        }
+        if(flag)
+        System.out.println("balanced");
+        else
+        System.out.println("not balanced");
+    }
+}
